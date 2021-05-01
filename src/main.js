@@ -9,12 +9,16 @@ const camera = new THREE.PerspectiveCamera(
 function generateColor() {
     const hexCode = "0123456789ABCDEF";
     let result = "#";
-    for (let i = 0; i < 6; i++)
-        result += hexCode[Math.floor(Math.random() * 16)]
+    for (let i = 0; i < 6; i++) result += hexCode[Math.floor(Math.random() * 16)];
     return result;
 }
 
-const geometry = new THREE.BoxGeometry();
+const randomShape = () => {
+    let number = Math.floor(Math.random() * 10);
+    return number % 2 == 0 ? new THREE.BoxGeometry() : new THREE.SphereGeometry();
+};
+
+const geometry = randomShape();
 const material = new THREE.MeshBasicMaterial({ color: generateColor() });
 const cube = new THREE.Mesh(geometry, material);
 const renderer = new THREE.WebGLRenderer();
@@ -24,7 +28,7 @@ camera.position.z = 2;
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-rotation = (Math.random() * (0.05 - 0.01))
+rotation = Math.random() * (0.05 - 0.01);
 
 function animate() {
     requestAnimationFrame(animate);
