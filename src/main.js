@@ -14,7 +14,7 @@ function generateColor() {
 }
 
 const randomShape = () => {
-    let number = Math.floor(Math.random() * 10);
+    let number = Math.floor(Math.random() * 100);
     return number % 2 == 0 ? new THREE.BoxGeometry() : new THREE.SphereGeometry();
 };
 
