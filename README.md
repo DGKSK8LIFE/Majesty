@@ -9,6 +9,6 @@ Three.js application that displays shapes at random, selecting color and rotatio
 
 ## Demo
 
-(low FPS due to GIF conversion)
+*low FPS due to GIF conversion*
 
 ![Demo](demo.gif)
