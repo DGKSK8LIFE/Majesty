@@ -5,6 +5,8 @@ Three.js application that displays shapes at random, selecting color and rotatio
 ## Tech Stack
 
 - HTML, CSS, JS
-- three.js
+- Three.js
 
 ## Demo
+
+![Demo](demo.gif)
